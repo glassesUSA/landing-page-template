@@ -1,0 +1,62 @@
+@mixin desktop {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin desktop-large {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin reset {
+    * {
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+:root {
+    --max-width: 1440px;
+
+    @include desktop() {
+        --max-width: 1280px;
+    }
+
+    @include tablet() {
+        --max-width: 1024px;
+    }
+
+    @include mobile() {
+        --max-width: 375px;
+    }
+
+    --cod-gray: #0F0F0F;
+    --foam: #F4FAFE;
+    --dodger-blue: #2196F3;
+    --nevada: #5B6971;
+    --outer-space: #232B30;
+}
+
+.maxWidth {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+// Code begins here
