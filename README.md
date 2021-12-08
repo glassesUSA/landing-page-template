@@ -1,9 +1,7 @@
 ## Usage
 
 ```bash
-git clone https://github.com/glassesUSA/landing-page-template .
-rm -rf .git
-rm -f README.md
+git clone https://github.com/glassesUSA/landing-page-template . && rm -rf .git && rm -f README.md
 ```
 
 ## Contributing
