@@ -1,25 +1,31 @@
 @import url("https://cdn.jsdelivr.net/npm/@glassesusa/dsm@latest/dist/styles.min.css");
 
 @mixin desktop {
-    @media (min-width: 1440px) {
+    @media (max-width: 1440px) {
         @content;
     }
 }
 
 @mixin desktop-large {
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin tablet-large {
+    @media (max-width: 1164px) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media (max-width: 1024px) {
+    @media (max-width: 936px) {
         @content;
     }
 }
 
 @mixin mobile {
-    @media (max-width: 600px) {
+    @media (max-width: 730px) {
         @content;
     }
 }
@@ -46,15 +52,19 @@
     --max-width: 1440px;
 
     @include desktop() {
-        --max-width: 1280px;
+        --max-width: 1164px;
+    }
+
+    @include tablet-large() {
+        --max-width: 936px;
     }
 
     @include tablet() {
-        --max-width: 1024px;
+        --max-width: 730px;
     }
 
     @include mobile() {
-        --max-width: 375px;
+        --max-width: 100%;
     }
 
     --cod-gray: #0F0F0F;
@@ -67,6 +77,22 @@
 .maxWidth {
     max-width: var(--max-width);
     margin: 0 auto;
+}
+
+.mobileOnly {
+    display: none;
+
+    @include mobile() {
+        display: block;
+    }
+}
+
+.desktopOnly {
+    display: block;
+
+    @include mobile() {
+        display: none;
+    }
 }
 
 // Code begins here
