@@ -2,7 +2,7 @@
 Paste this command into the terminal inside the folder where you want the files to be copied to and follow the instructions.
 
 ```bash
-echo "Please enter the directory where you want the project to be cloned to (Use . to use the current directory):" && read x && git clone https://github.com/glassesUSA/landing-page-template $x  && rm -rf $x/.git && rm -f $x/README.md
+clear && echo "Please enter the directory where you want the project to be cloned to (Use . to use the current directory):" && read x && git clone https://github.com/glassesUSA/landing-page-template $x  && rm -rf $x/.git && rm -f $x/README.md
 ```
 
 ## Contributing
