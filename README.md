@@ -1,8 +1,8 @@
 ## Usage
-Paste this command into the terminal inside the folder where you want the files to be copied to. If you want to create a new folder, change the . after the github url to the folder name.
+Paste this command into the terminal inside the folder where you want the files to be copied to and follow the instructions.
 
 ```bash
-git clone https://github.com/glassesUSA/landing-page-template . && rm -rf .git && rm -f README.md
+clear && echo "Please enter the directory where you want the project to be cloned to (Use . to use the current directory):" && read x && git clone https://github.com/glassesUSA/landing-page-template $x  && rm -rf $x/.git && rm -f $x/README.md
 ```
 
 ## Contributing
