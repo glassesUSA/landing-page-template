@@ -33,10 +33,6 @@
         Arial,
         sans-serif;
 
-    @include mobile() {
-        font-family: Helvetica;
-    }
-
     * {
         box-sizing: border-box;
     }
