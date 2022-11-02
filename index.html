@@ -20,6 +20,16 @@
         var insertScript = document.createElement("script");
         insertScript.src = 'https://cdn.jsdelivr.net/npm/@glassesusa/dsm@latest/dist/dsm-effects.min.js'
         document.head.appendChild(insertScript)
+
+        function sendMKTEvents(action, label) {
+            if (typeof dataLayer === "undefined") return
+            dataLayer.push({
+                event: 'GeneralInteraction',
+                eventCategory: 'Marketing LP - D',
+                eventAction: action,
+                eventLabel: label,
+            });
+        }
     </script>
 </body>
 
