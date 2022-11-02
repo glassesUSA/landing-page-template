@@ -25,7 +25,7 @@
             if (typeof dataLayer === "undefined") return
             dataLayer.push({
                 event: 'GeneralInteraction',
-                eventCategory: 'Marketing LP - D',
+                eventCategory: `Marketing LP - ${window.innerWidth > 768 ? 'D' :'M'}`,
                 eventAction: action,
                 eventLabel: label,
             });
